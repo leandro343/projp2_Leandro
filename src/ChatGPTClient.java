@@ -72,7 +72,7 @@ public class ChatGPTClient {
     }
 
     public List<String> obterEmojisFilme(String filme, int quantidade) throws IOException {
-        String prompt = "Obtenha emojis relacionados ao filme:\n" + filme;
+        String prompt = "emojis relacionados ao filme:\n" + filme;
 
         ChatGPTRequest request = new ChatGPTRequest("text-davinci-003", prompt, quantidade);
         String requestBody = gson.toJson(request);
@@ -104,7 +104,7 @@ public class ChatGPTClient {
         ChatGPTClient client = new ChatGPTClient(openaiApiKey);
 
         try {
-            String textoIngles = "Hello, how are you?";
+            String textoIngles = "Hi how are you?";
             List<String> traducoes = client.obterTraducoes(textoIngles, 2);
             System.out.println("Traduções: " + traducoes);
 
@@ -114,7 +114,7 @@ public class ChatGPTClient {
 
             String filme = "Titanic";
             List<String> emojisFilme = client.obterEmojisFilme(filme, 3);
-            System.out.println("Emojis do filme: " + emojisFilme);
+            System.out.println("emojis do filme: " + emojisFilme);
         } catch (IOException e) {
             e.printStackTrace();
         }

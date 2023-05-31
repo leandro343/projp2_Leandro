@@ -10,7 +10,7 @@ public class TraducaoOpcao {
 
     public void executar() {
         try {
-            String textoIngles = JOptionPane.showInputDialog("Digite o texto em inglês:");
+            String textoIngles = JOptionPane.showInputDialog("digite um texto em inglês:");
             int quantidade = 2;
             List<String> traducoes = chatGPTClient.obterTraducoes(textoIngles, quantidade);
             exibirTraducoes(traducoes);
@@ -21,7 +21,7 @@ public class TraducaoOpcao {
 
     private void exibirTraducoes(List<String> traducoes) {
         StringBuilder sb = new StringBuilder();
-        sb.append("Traduções:\n");
+        sb.append("traduções:\n");
         for (String traducao : traducoes) {
             sb.append("- ").append(traducao).append("\n");
         }

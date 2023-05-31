@@ -9,7 +9,7 @@ public class ExplicacaoParaCriancasOpcao {
 
     public void executar() {
         try {
-            String pergunta = JOptionPane.showInputDialog("Digite uma pergunta:");
+            String pergunta = JOptionPane.showInputDialog("digite uma pergunta :");
             String explicacao = chatGPTClient.obterTraducoes(pergunta, 1).get(0);
             exibirExplicacao(explicacao);
         } catch (Exception e) {
@@ -18,6 +18,6 @@ public class ExplicacaoParaCriancasOpcao {
     }
 
     private void exibirExplicacao(String explicacao) {
-        JOptionPane.showMessageDialog(null, "Explicação para crianças:\n" + explicacao);
+        JOptionPane.showMessageDialog(null, "explicação para crianças:\n" + explicacao);
     }
 }

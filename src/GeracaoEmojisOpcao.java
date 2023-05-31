@@ -10,7 +10,7 @@ public class GeracaoEmojisOpcao {
 
     public void executar() {
         try {
-            String nomeFilme = JOptionPane.showInputDialog("Digite o nome do filme:");
+            String nomeFilme = JOptionPane.showInputDialog("digite o nome do filme :");
             int quantidade = 3;
             List<String> emojis = chatGPTClient.obterEmojisFilme(nomeFilme, quantidade);
             exibirEmojis(emojis);
@@ -21,7 +21,7 @@ public class GeracaoEmojisOpcao {
 
     private void exibirEmojis(List<String> emojis) {
         StringBuilder sb = new StringBuilder();
-        sb.append("Emojis para o filme:\n");
+        sb.append("emojis para o filme:\n");
         for (String emoji : emojis) {
             sb.append("- ").append(emoji).append("\n");
         }
